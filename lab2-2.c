@@ -27,7 +27,7 @@ printf("value of *ptr== %d\n", *ptr); //포인터 ptr이 가르키는 주소의 
 dptr= &ptr;/* dptris now holding the address of ptr*/
 //이중 포인터 dptr가 포인터 ptr을 가르킴
 
-printf("\n[checking values after dptr= &ptr] \n");//dptr= &ptr 를 하기전 값 확인이라 출력
+printf("\n[checking values after dptr= &ptr] \n");//dptr= &ptr 를 한 후의 값 확인이라 출력
 printf("value of i== %d\n", i); // 변수 i의 값 출력(1234)
 printf("address of i== %p\n", &i); // 변수 i의 주소 출력
 printf("value of ptr== %p\n", ptr); // 포인터 ptr의 값 출력(=변수 i의 주소)
@@ -46,15 +46,15 @@ printf("\n[after *ptr= 7777] \n"); //*ptr= 7777를 했다고 출력
 printf("value of i== %d\n", i); //i의 값 출력(7777)
 printf("value of *ptr== %d\n", *ptr); //포인터 ptr이 가르키는 주소의 값 출력(i의 값 출력:7777)
 printf("value of **dptr== %d\n", **dptr); 
-//이중포인터 dptr이 가르키는 포인터가 가르키는 주소의 값 출력(i의 값 출력:7777)
+//이중포인터 dptr가 가르키는 포인터가 가르키는 주소의 값 출력(i의 값 출력:7777)
 
 **dptr= 8888;/* changing the value of **dptr*/
-//이중포인터 dptr이 가르키는 ptr이 가르키는 변수 i의 값을 8888로 변경
+//이중포인터 dptr이 가르키는 포인터 ptr이 가르키는 변수 i의 값을 8888로 변경
 
 printf("\n[after **dptr= 8888] \n"); //**dptr= 8888를 했다고 출력
 printf("value of i== %d\n", i); //i의 값 출력(8888)
 printf("value of *ptr== %d\n", *ptr);//포인터 ptr이 가르키는 주소의 값 출력(=i의 값 출력:8888)
 printf("value of **dptr== %d\n", **dptr);
-//이중포인터 dptr이 가르키는 포인터가 가르키는 주소의 값 출력(=i의 값 출력:8888)
+//이중포인터 dptr이 가르키는 포인터 변수가 가르키는 주소의 값 출력(=i의 값 출력:8888)
 return 0;
 }
